@@ -35,7 +35,7 @@ class HatenaDiary
 end
 
 h = HatenaDiary.new
-
+# TODO the value of title and content come from file.
 h.title = "title2"
 h.content = "content1"
 
@@ -52,6 +52,7 @@ Net::HTTP.start('d.hatena.ne.jp', 80) {|http|
    when Net::HTTPCreated then
       puts "diary update done!"
    else
+      # TODO write the details of exception handling.
       STDERR.puts "error..."
       puts response
    end
